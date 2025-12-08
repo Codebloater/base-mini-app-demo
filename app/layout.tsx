@@ -19,14 +19,15 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       "fc:miniapp": JSON.stringify({
         version: "next",
-        imageUrl: "https://demo-wishlist-mini-app.vercel.app/image",
+        imageUrl: "https://demo-wishlist-mini-app.vercel.app/splash.jpg",
         button: {
           title: `Wishlist me!`,
           action: {
             type: "launch_miniapp",
             name: "Wishlist me",
             url: "https://demo-wishlist-mini-app.vercel.app",
-            splashImageUrl: "https://demo-wishlist-mini-app.vercel.app/splash",
+            splashImageUrl:
+              "https://demo-wishlist-mini-app.vercel.app/image.png",
             splashBackgroundColor: "#000000"
           }
         }
