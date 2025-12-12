@@ -19,9 +19,9 @@ export async function generateMetadata(): Promise<Metadata> {
     other: {
       "fc:miniapp": JSON.stringify({
         version: "next",
-        imageUrl: "https://demo-wishlist-mini-app.vercel.app/splash.jpg",
+        imageUrl: "https://demo-wishlist-mini-app.vercel.app/banner.png",
         button: {
-          title: `Wishlist me!`,
+          title: `Play OpenLand`,
           action: {
             type: "launch_miniapp",
             name: "Wishlist me",

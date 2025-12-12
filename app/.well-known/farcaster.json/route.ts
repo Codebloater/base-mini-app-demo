@@ -7,7 +7,7 @@ return Object.fromEntries(
 export async function GET() {
 const URL = process.env.NEXT_PUBLIC_URL as string;
 return Response.json({
-  "accountAssociation": {  // these will be added in step 5
+  "accountAssociation": {  
     "header": "eyJmaWQiOjEzNTMwMDAsInR5cGUiOiJhdXRoIiwia2V5IjoiMHhEYWNlQzUwMmREMjgwYTRjOWFCNTlmMWJkQzQyYUM4OTQzYzFGZDU5In0",
     "payload": "eyJkb21haW4iOiJkZW1vLXdpc2hsaXN0LW1pbmktYXBwLnZlcmNlbC5hcHAifQ",
     "signature": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcFbdnXdtr38V3JxMhMSGAY4iMKbJ_sc6AL8wC8nOxLoHgOimHcYNoCkVRqRgkCai0m-B_cprcbYcGhJZnEqLEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl8ZgIay2xclZzG8RWZzuWvO8j9R0fus3XxDee9lRlVy8dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD3eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiUjF0N0ZlMF9ENE9Wbmx5Rl9jMlBlam5wNGJGOFlIMXVQZ3J6SEpDWi1BbyIsIm9yaWdpbiI6Imh0dHBzOi8va2V5cy5jb2luYmFzZS5jb20iLCJjcm9zc09yaWdpbiI6ZmFsc2UsIm90aGVyX2tleXNfY2FuX2JlX2FkZGVkX2hlcmUiOiJkbyBub3QgY29tcGFyZSBjbGllbnREYXRhSlNPTiBhZ2FpbnN0IGEgdGVtcGxhdGUuIFNlZSBodHRwczovL2dvby5nbC95YWJQZXgifQAAAAAAAAAAAA"
@@ -18,9 +18,9 @@ return Response.json({
   "miniapp": {
     "version": "1",
     "name": "Example Mini App",
-    "homeUrl": "https://ex.co",
-    "iconUrl": "https://ex.co/i.png",
-    "splashImageUrl": "https://ex.co/l.png",
+    "homeUrl": "https://demo-wishlist-mini-app.vercel.app",
+    "iconUrl": "https://demo-wishlist-mini-app.vercel.app/splash.jpg",
+    "splashImageUrl": "https://demo-wishlist-mini-app.vercel.app/image.png",
     "splashBackgroundColor": "#000000",
     "webhookUrl": "https://ex.co/api/webhook",
     "subtitle": "Fast, fun, social",
