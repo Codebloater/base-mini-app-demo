@@ -32,10 +32,28 @@ function Cloud({ top }: { top: number }) {
 
 export default function Home() {
   const [clouds, setClouds] = useState<CloudType[]>([]);
+  const [name, setName] = useState<string | null>(null);
 
-  // Mini-App Sdk
   useEffect(() => {
+    let mounted = true;
+
     sdk.actions.ready();
+
+    (async () => {
+      const miniAppStatus = await sdk.isInMiniApp();
+      if (!miniAppStatus) return;
+
+      const context = await sdk.context;
+      const displayName = context?.user?.displayName;
+
+      if (mounted && displayName?.trim()) {
+        setName(displayName);
+      }
+    })();
+
+    return () => {
+      mounted = false;
+    };
   }, []);
 
   // Cloud Instantiation
@@ -68,6 +86,11 @@ export default function Home() {
             <h1 className="text-7xl font-blrrpixs leading-tight text-[#ffffff] z-20">
               Openland
             </h1>
+            {name && (
+              <p className="font-suture text-[#ffffff] w-full text-center">
+                🌼 Welcome {name}! 🌼
+              </p>
+            )}
           </div>
 
           {/* Crop Growth Animation */}
