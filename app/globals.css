@@ -1,2 +1,48 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: 'karma';
+    src: url('/fonts/Karma_Future.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'suture';
+    src: url('/fonts/Karma_Suture.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'blrrpixs';
+    src: url('/fonts/blrrpixs016.ttf') format("opentype");
+}
+
+.font-karma {
+    font-family: 'karma', sans-serif;
+}
+
+.font-suture {
+    font-family: 'suture', sans-serif;
+}
+
+.font-blrrpixs {
+    font-family: 'blrrpixs', sans-serif;
+}
+
+@keyframes cloud-move {
+    0% {
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(110vw);
+        opacity: 0;
+    }
+}

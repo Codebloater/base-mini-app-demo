@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Geist_Mono } from "next/font/google";
-import "./globals.css";
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"]
-});
+import "./globals.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -16,13 +11,13 @@ export async function generateMetadata(): Promise<Metadata> {
         version: "next",
         imageUrl: "https://demo-wishlist-mini-app.vercel.app/banner.png",
         button: {
-          title: `Start Playing!`,
+          title: `Start Building!`,
           action: {
             type: "launch_miniapp",
             name: "Wishlist me",
             url: "https://demo-wishlist-mini-app.vercel.app",
             splashImageUrl:
-              "https://demo-wishlist-mini-app.vercel.app/image.png",
+              "https://demo-wishlist-mini-app.vercel.app/Splash.png",
             splashBackgroundColor: "#000000"
           }
         }
@@ -38,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${geistMono.variable} antialiased `}>{children}</body>
+      <body className={`antialiased `}>{children}</body>
     </html>
   );
 }
