@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"]
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -21,7 +16,7 @@ export async function generateMetadata(): Promise<Metadata> {
         version: "next",
         imageUrl: "https://demo-wishlist-mini-app.vercel.app/banner.png",
         button: {
-          title: `Play OpenLand`,
+          title: `Start Playing!`,
           action: {
             type: "launch_miniapp",
             name: "Wishlist me",
@@ -43,11 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={` ${geistMono.variable} antialiased `}>{children}</body>
     </html>
   );
 }
