@@ -33,6 +33,7 @@ function Cloud({ top }: { top: number }) {
 export default function Home() {
   const [clouds, setClouds] = useState<CloudType[]>([]);
   const [name, setName] = useState<string | null>(null);
+  const [pfpUrl, setPfpUrl] = useState<string | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -45,9 +46,13 @@ export default function Home() {
 
       const context = await sdk.context;
       const displayName = context?.user?.displayName;
+      const pfp = context?.user?.pfpUrl;
 
-      if (mounted && displayName?.trim()) {
+      if (!mounted) return;
+
+      if (displayName?.trim()) {
         setName(displayName);
+        if (pfp) setPfpUrl(pfp);
       }
     })();
 
@@ -86,6 +91,16 @@ export default function Home() {
             <h1 className="text-7xl font-blrrpixs leading-tight text-[#ffffff] z-20">
               Openland
             </h1>
+            {pfpUrl && (
+              <Image
+                src={pfpUrl}
+                alt="pfp"
+                width={45}
+                height={45}
+                className="rounded-full"
+                priority
+              />
+            )}
             {name && (
               <p className="font-suture text-[#ffffff] w-full text-center">
                 🌼 Welcome {name}! 🌼
