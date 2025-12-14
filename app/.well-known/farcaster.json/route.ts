@@ -21,7 +21,7 @@ return Response.json({
     "homeUrl": "https://demo-wishlist-mini-app.vercel.app",
     "iconUrl": "https://demo-wishlist-mini-app.vercel.app/Icon.png",
     "splashImageUrl": "https://demo-wishlist-mini-app.vercel.app/Splash.png",
-    "splashBackgroundColor": "#000000",
+    "splashBackgroundColor": "#ffffff",
     "webhookUrl": "https://ex.co/api/webhook",
     "subtitle": "social, fun, earn",
     "description": "Land of Possibilities",
@@ -31,7 +31,11 @@ return Response.json({
       "https://ex.co/s3.png"
     ],
     "primaryCategory": "games",
-    "tags": ["example", "miniapp", "baseapp"],
+    "tags": [
+      "rewards",
+      "leaderboard",
+      "warpcast",
+      "earn"],
     "heroImageUrl": "https://ex.co/og.png",
     "tagline": "Land of Infinite Possibilities",
     "ogTitle": "OpenLand",

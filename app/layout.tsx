@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
             url: "https://demo-wishlist-mini-app.vercel.app",
             splashImageUrl:
               "https://demo-wishlist-mini-app.vercel.app/Splash.png",
-            splashBackgroundColor: "#000000"
+            splashBackgroundColor: "#ffffff"
           }
         }
       })
