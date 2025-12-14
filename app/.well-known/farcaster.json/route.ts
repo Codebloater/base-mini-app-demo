@@ -24,17 +24,17 @@ return Response.json({
     "splashBackgroundColor": "#000000",
     "webhookUrl": "https://ex.co/api/webhook",
     "subtitle": "social, fun, earn",
-    "description": "Grow your farm, trade, Play together!",
+    "description": "Land of Possibilities",
     "screenshotUrls": [
       "https://ex.co/s1.png",
       "https://ex.co/s2.png",
       "https://ex.co/s3.png"
     ],
-    "primaryCategory": "game",
+    "primaryCategory": "games",
     "tags": ["example", "miniapp", "baseapp"],
     "heroImageUrl": "https://ex.co/og.png",
     "tagline": "Land of Infinite Possibilities",
-    "ogTitle": "Example Mini App",
+    "ogTitle": "OpenLand",
     "ogDescription": "Challenge friends in real time.",
     "ogImageUrl": "https://ex.co/og.png",
     "noindex": true

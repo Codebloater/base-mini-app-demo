@@ -12,6 +12,7 @@
     "@coinbase/onchainkit": "^1.1.2",
     "@farcaster/miniapp-sdk": "^0.2.1",
     "kaplay": "^3001.0.19",
+    "lucide-react": "^0.561.0",
     "next": "16.0.7",
     "react": "19.2.0",
     "react-dom": "19.2.0"

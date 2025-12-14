@@ -1,6 +1,7 @@
 "use client";
 
 import { sdk } from "@farcaster/miniapp-sdk";
+import { MoveRightIcon } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -58,17 +59,23 @@ export default function Home() {
 
   // Cloud Instantiation
   useEffect(() => {
-    const interval = setInterval(() => {
-      const id = Date.now();
-      const top = Math.random() * 40; // clouds only in upper area
+    const spawnCloud = () => {
+      const id = Date.now() + Math.random();
+      const top = Math.random() * 40;
 
       setClouds((prev) => [...prev, { id, top }]);
 
-      // Remove cloud after animation ends
+      // remove after animation
       setTimeout(() => {
         setClouds((prev) => prev.filter((c) => c.id !== id));
       }, 30000);
-    }, 8000); // spawn every 6s
+    };
+
+    // 🚀 spawn instantly on load
+    spawnCloud();
+
+    // then keep spawning
+    const interval = setInterval(spawnCloud, 6000);
 
     return () => clearInterval(interval);
   }, []);
@@ -76,6 +83,9 @@ export default function Home() {
   return (
     <>
       <main className="flex flex-col items-center justify-between min-h-screen bg-[#0052FF] relative overflow-hidden">
+        <div className="absolute top-3 left-0 py-1 px-2 text-sm bg-[#8edd65] font-suture font-bold">
+          Coming Soon!
+        </div>
         {/* Clouds */}
         {clouds.map((cloud) => (
           <Cloud key={cloud.id} top={cloud.top} />
@@ -109,9 +119,9 @@ export default function Home() {
           <div className="flex flex-col">
             <div
               rel="noopener noreferrer"
-              className="mt-4 px-10 py-3 skew-3 text-xl font-suture bg-[#ffd12f] text-[#0a0b0d] font-bold shadow-[4px_4px_0px_0px_#000] border-4 border-[#0a0b0d] rounded-none"
+              className="mt-4 px-10 py-3 flex justify-center items-center gap-3 text-xl font-suture bg-[#ffd12f] text-[#0a0b0d] font-bold shadow-[4px_4px_0px_0px_#000] border-4 border-[#0a0b0d] rounded-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-[2px_2px_0px_0px_#000] transition-all"
             >
-              Coming Soooon!
+              Enter Leaderboard <MoveRightIcon size={34} />
             </div>
 
             <div className="pt-8 text-xs opacity-70 text-[#ffffff]">

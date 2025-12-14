@@ -11,7 +11,7 @@ export async function generateMetadata(): Promise<Metadata> {
         version: "next",
         imageUrl: "https://demo-wishlist-mini-app.vercel.app/banner.png",
         button: {
-          title: `Start Building!`,
+          title: `Get Early Access!`,
           action: {
             type: "launch_miniapp",
             name: "Wishlist me",
