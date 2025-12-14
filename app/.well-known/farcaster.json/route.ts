@@ -1,23 +1,11 @@
-function withValidProperties(
-  properties: Record<string, undefined | string | string[]>
-) {
-  return Object.fromEntries(
-    Object.entries(properties).filter(
-      ([_, value]) => (Array.isArray(value) ? value.length > 0 : !!value)
-    )
-  );
-}
-
 export async function GET() {
-  const URL = process.env.NEXT_PUBLIC_URL as string;
   return Response.json({
     accountAssociation: {
       header:
         "eyJmaWQiOjEzNTMwMDAsInR5cGUiOiJhdXRoIiwia2V5IjoiMHhEYWNlQzUwMmREMjgwYTRjOWFCNTlmMWJkQzQyYUM4OTQzYzFGZDU5In0",
       payload: "eyJkb21haW4iOiJkZW1vLXdpc2hsaXN0LW1pbmktYXBwLnZlcmNlbC5hcHAifQ",
-      signature:
-        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcFbdnXdtr38V3JxMhMSGAY4iMKbJ_sc6AL8wC8nOxLoHgOimHcYNoCkVRqRgkCai0m-B_cprcbYcGhJZnEqLEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAl8ZgIay2xclZzG8RWZzuWvO8j9R0fus3XxDee9lRlVy8dAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD3eyJ0eXBlIjoid2ViYXV0aG4uZ2V0IiwiY2hhbGxlbmdlIjoiUjF0N0ZlMF9ENE9Wbmx5Rl9jMlBlam5wNGJGOFlIMXVQZ3J6SEpDWi1BbyIsIm9yaWdpbiI6Imh0dHBzOi8va2V5cy5jb2luYmFzZS5jb20iLCJjcm9zc09yaWdpbiI6ZmFsc2UsIm90aGVyX2tleXNfY2FuX2JlX2FkZGVkX2hlcmUiOiJkbyBub3QgY29tcGFyZSBjbGllbnREYXRhSlNPTiBhZ2FpbnN0IGEgdGVtcGxhdGUuIFNlZSBodHRwczovL2dvby5nbC95YWJQZXgifQAAAAAAAAAAAA"
-    },
+      signature: "oGrNSy0x7TNulXf0AGX7td7xUENBVIOELEhIPcOuU5UpQO/CgJzNDKI1r1Wrl81o1JW3QbYAcVU6Lcs3dO4Rlhw="
+        },
     baseBuilder: {
       ownerAddress: "0xDaceC502dD280a4c9aB59f1bdC42aC8943c1Fd59" // add your Base Account address here
     },
@@ -44,25 +32,6 @@ export async function GET() {
       ogDescription: "Challenge friends in real time.",
       ogImageUrl: "https://ex.co/og.png",
       noindex: true
-    },
-    frame: {
-      name: "Demo Mini App",
-      version: "1",
-      iconUrl: "https://https://demo-wishlist-mini-app.vercel.app/Icon.png",
-      homeUrl: "https://https://demo-wishlist-mini-app.vercel.app",
-      imageUrl: "https://https://demo-wishlist-mini-app.vercel.app/image.png",
-      buttonTitle: "Open Demo Mini App",
-      splashImageUrl:
-        "https://https://demo-wishlist-mini-app.vercel.app/Splash.png",
-      splashBackgroundColor: "#ffffff",
-      webhookUrl:
-        "https://https://demo-wishlist-mini-app.vercel.app/api/webhook",
-      subtitle: "social, fun, earn",
-      description: "Demo Mini App",
-      primaryCategory: "games",
-      tags: ["rewards", "earn", "social", "community"],
-      heroImageUrl: "https://demo-wishlist-mini-app.vercel.app/Hero.png",
-      tagline: "Grow, Trade, Earn"
     }
   });
 }
